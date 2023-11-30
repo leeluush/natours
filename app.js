@@ -80,7 +80,7 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 app.post(
-  'https://pozmatours-84e34440b450.herokuapp.com/webhook-checkout',
+  '/webhook-checkout',
   express.raw({ type: 'application/json' }),
   bookingController.webhookCheckout
 );
